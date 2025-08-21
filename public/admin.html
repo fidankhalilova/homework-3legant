@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../node_modules/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon"
+        href="https://xstore.b-cdn.net/elementor3/plants-store/wp-content/uploads/sites/8/2024/09/Logo-1.svg"
+        type="image/x-icon">
+    <link rel="stylesheet" href="../src/scss/style.css">
+    <title>Admin - 3legant</title>
+</head>
+
+<body style="background-color: lightgray;">
+    <header>
+        <h1>Admin Panel</h1>
+    </header>
+    <main>
+        <section class="new-forms">
+            <div class="new">
+                <h2>Product Information</h2>
+                <form id="form">
+                    <div class="new-form">
+                        <div class="name-of-product input">
+                            <label for="title" class="title">Name of the Product</label>
+                            <input type="text" id="title" name="title" placeholder="Enter the name">
+                        </div>
+                        <div class="photo-of-product input">
+                            <label for="photo" class="photo">Photo of the Product (link)</label>
+                            <input type="text" id="photo" name="photo" placeholder="Enter the link">
+                        </div>
+                        <div class="category-of-product input">
+                            <label for="category" class="category">Category of the Product</label>
+                            <select type="" id="category" name="category">
+                                <option value="select" selected>Select</option>
+                                <option value="new">New Item</option>
+                                <option value="best">Best Seller</option>
+                            </select>
+                        </div>
+                        <div class="rating-of-product input">
+                            <label for="rating" class="rating">Add Current Rating (1 to 5)</label>
+                            <input type="range" id="rating" name="rating" min="0" max="5" value="1">
+                        </div>
+                        <div class="price-of-product input">
+                            <label for="price" class="price">Price of the Product</label>
+                            <input type="text" id="price" name="price" placeholder="Enter the price">
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <button type="submit" class="button black-button">Submit</button>
+                    </div>
+            </div>
+            </form>
+            </div>
+        </section>
+    </main>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/js/app.js"></script>
+</body>
+
+</html>

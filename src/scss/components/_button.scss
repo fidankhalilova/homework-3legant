@@ -1,0 +1,30 @@
+.button {
+    background-color: map-get($colors, black-c);
+    color: map-get($colors, white-c);
+    font-size: map-get($font-size, font-xxs);
+    font-weight: 500;
+    border: none;
+    @include flex(row, center, center, nowrap, null);
+    padding: 20px 34px;
+    border-radius: 5px;
+}
+
+.black-button {
+    background-color: map-get($colors, black-c);
+    color: map-get($colors, white-c);
+
+    &:hover {
+        background-color: map-get($colors, white-c);
+        color: map-get($colors, black-c);
+    }
+}
+
+.white-button {
+    background-color: map-get($colors, white-c);
+    color: map-get($colors, black-c);
+
+    &:hover {
+        background-color: map-get($colors, green-c);
+        color: map-get($colors, white-c);
+    }
+}

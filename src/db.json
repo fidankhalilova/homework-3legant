@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": "f618",
+      "title": "fidan",
+      "photo": "kshgjghs",
+      "category": "best",
+      "rating": "2",
+      "price": "8357"
+    },
+    {
+      "id": "5a55",
+      "title": "Fidna",
+      "photo": "https://plus.unsplash.com/premium_photo-1755453910703-7cc1dedc5e61?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "new",
+      "rating": "2",
+      "price": "34"
+    },
+    {
+      "id": "adea",
+      "title": "Fidna",
+      "photo": "https://plus.unsplash.com/premium_photo-1755453910703-7cc1dedc5e61?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "new",
+      "rating": "2",
+      "price": "34"
+    },
+    {
+      "id": "9a1e",
+      "title": "Fidna",
+      "photo": "https://plus.unsplash.com/premium_photo-1755453910703-7cc1dedc5e61?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "new",
+      "rating": "2",
+      "price": "34"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+header {
+    background-color: map-get($colors, yellow-c);
+    padding: 20px 0;
+
+    h1 {
+        color: map-get($colors, black-c);
+        font-family: $font-two;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 44px;
+        letter-spacing: -0.4px;
+        text-align: center;
+    }
+}

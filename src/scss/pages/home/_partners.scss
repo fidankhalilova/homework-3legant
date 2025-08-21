@@ -1,0 +1,29 @@
+.partners {
+    margin: 40px 0;
+
+    .partners-content {
+        @include flex(row, space-between, center, nowrap, 24px);
+
+        img {
+            width: 167px;
+            height: 64px;
+            object-fit: cover;
+        }
+
+        #show {
+            @media (max-width: 1000px) {
+                display: block;
+            }
+        }
+
+        #not-show {
+            @media (max-width: 1000px) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            @include flex(column, center, center, nowrap, 16px);
+        }
+    }
+}

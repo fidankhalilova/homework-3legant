@@ -1,0 +1,95 @@
+header {
+    .desktop_nav {
+        @include flex(row, space-between, center, nowrap, null);
+        padding: 10px 0;
+
+        @media (max-width: 1000px) {
+            display: none;
+        }
+
+        .navbar {
+            @include flex(row, space-between, center, nowrap, null);
+
+            .logo {
+                @include flex(row, flex-start, center, nowrap, null);
+
+                h1 {
+                    font-size: map-get($font-size, font-lg);
+                    font-weight: 500;
+                }
+            }
+
+            .nav-list {
+                @include flex(row, center, center, nowrap, null);
+
+                ul {
+                    @include flex(row, flex-start, center, nowrap, 40px);
+
+                    li {
+                        font-size: map-get($font-size, font-xs);
+                    }
+                }
+            }
+
+            .user-panel {
+                @include flex(row, flex-end, center, nowrap, 15px);
+                font-size: map-get($font-size, font-md);
+
+                .cart {
+                    @include flex(row, flex-end, center, nowrap, 10px);
+
+                    p {
+                        padding: 6px;
+                        font-size: map-get($font-size, font-xxs);
+                        background-color: map-get($colors, black-c);
+                        color: map-get($colors, yellow-c);
+                        border-radius: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile_nav {
+        display: none;
+
+        @media (max-width: 1000px) {
+            padding: 20px 10px;
+            display: block;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .item {
+            position: relative;
+            @include flex(row, space-between, center, nowrap, null);
+
+            .logo {
+                @include flex(row, flex-start, center, nowrap, null);
+
+                h1 {
+                    font-size: map-get($font-size, font-lg);
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .offcanvas-header {
+            background-color: map-get($colors, yellow-c);
+
+            h5 {
+                font-size: map-get($font-size, font-lg);
+                font-family: $font-one;
+            }
+        }
+
+        .offcanvas-body {
+            background-color: map-get($colors, light-yellow-c);
+
+            .mobile-nav-list {
+                margin-top: 20px;
+                @include flex(column, center, center, null, 20px);
+            }
+        }
+    }
+}

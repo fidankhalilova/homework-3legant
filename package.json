@@ -1,0 +1,19 @@
+{
+  "name": "3legant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "json-server --watch ./src/db.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bootstrap": "^5.3.7",
+    "json-server": "^1.0.0-beta.3",
+    "remixicon": "^4.6.0"
+  }
+}

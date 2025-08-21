@@ -1,0 +1,102 @@
+.product {
+    @include flex(column, center, flex-start, nowrap, 15px);
+
+    .product-preview {
+        position: relative;
+
+        .prod-img {
+            position: relative;
+            width: 100%;
+
+            img {
+                width: 270px;
+                height: 380px;
+                object-fit: cover;
+
+                @media (max-width: 1000px) {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+        }
+
+        .hover-act {
+            @include flex(column, center, center, nowrap, null);
+            height: 100%;
+            width: 100%;
+            z-index: 2;
+
+            .act-line-1 {
+                @include flex(row, center, center, nowrap, 140px);
+                position: absolute;
+                top: 15px;
+                width: 100%;
+
+                @media (max-width: 1000px) {
+                    @include flex(row, center, center, nowrap, 280px);
+                }
+
+                #label {
+                    @include flex(row, center, center, nowrap, null);
+                    padding: 4px 14px;
+                    border-radius: 4px;
+                    text-transform: uppercase;
+                    background-color: map-get($colors, white-c);
+                }
+
+                .like {
+                    @include flex(row, center, center, nowrap, null);
+                    width: 32px;
+                    height: 32px;
+                    padding: 6px;
+                    background-color: map-get($colors, white-c);
+                    border-radius: 100%;
+                }
+            }
+
+            .act-line-2 {
+                @include flex(row, center, center, nowrap, null);
+                position: absolute;
+                bottom: 20px;
+                width: 100%;
+
+                button {
+                    width: 230px;
+                    padding: 10px 24px;
+
+                    @media (max-width: 1000px) {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+    .stars {
+        @include flex(row, flex-start, center, nowrap, 5px);
+    }
+
+    .name {
+        width: 262px;
+        @include flex(row, flex-start, center, wrap, 5px);
+
+        h3 {
+            font-family: $font-three;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 26px;
+        }
+    }
+
+    .price {
+        p {
+            font-family: $font-three;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 22px;
+        }
+    }
+}

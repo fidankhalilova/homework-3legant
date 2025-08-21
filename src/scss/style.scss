@@ -1,0 +1,23 @@
+@import "./base/reset";
+@import "./vendors/variable";
+@import "./base/common";
+@import "./vendors/mixin";
+@import "./vendors/extend";
+@import "./components/link";
+@import "./components/button";
+@import "./components/product";
+@import "./layout/navbar";
+@import "./layout/footer";
+@import "./pages/home/banner";
+@import "./pages/home/partners";
+@import "./pages/home/new-arrivals";
+@import "./pages/home/shop-collection";
+@import "./pages/home/best-seller";
+@import "./pages/home/promotion";
+@import "./pages/home/why-us";
+@import "./pages/home/socials";
+@import "./pages/home/newsletter";
+@import "./pages/admin/header";
+@import "./pages/admin/form";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');

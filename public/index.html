@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../node_modules/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="../src/assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../src/scss/style.css">
+
+    <title>Home - 3legant</title>
+</head>
+
+<body>
+    <header>
+        <nav class="desktop_nav">
+            <div class="container">
+                <div class="navbar">
+                    <div class="col-xl-3">
+                        <div class="logo">
+                            <h1>3legant.</h1>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="nav-list">
+                            <ul>
+                                <li>
+                                    <a href="../public/index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="../public/our_story.html">Shop <i class="ri-arrow-down-s-line"></i></a>
+                                </li>
+                                <li>
+                                    <a href="../public/shop.html">Product <i class="ri-arrow-down-s-line"></i></a>
+                                </li>
+                                <li>
+                                    <a href="../public/contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="user-panel">
+                            <div class="search"><a href="#"><i class="ri-search-line"></i></a></div>
+                            <div class="user"><a href="#"><i class="ri-user-line"></i></a></div>
+                            <div class="cart">
+                                <a href="#"><i class="ri-shopping-bag-3-line"></i></a>
+                                <p>0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="mobile_nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="item">
+                            <div class="logo">
+                                <h1>3legant.</h1>
+                            </div>
+                            <div class="hamburger">
+                                <i class="ri-menu-line" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"></i>
+
+                                <div class="offcanvas offcanvas-start w-100" data-bs-scroll="true"
+                                    data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling"
+                                    aria-labelledby="offcanvasScrollingLabel">
+                                    <div class="offcanvas-header">
+                                        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Navigation bar</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <ul class="mobile-nav-list">
+                                            <li>
+                                                <a href="../public/index.html"><button class="btn">Home</button></a>
+                                            </li>
+                                            <li>
+                                                <a href="../public/our_story.html"><button class="btn">Shop</button></a>
+                                            </li>
+                                            <li>
+                                                <a href="../public/shop.html"><button class="btn">Product</button></a>
+                                            </li>
+                                            <li>
+                                                <a href="../public/contact.html"><button class="btn">Contact
+                                                        Us</button></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="banner-content">
+                <div class="bg-img">
+                    <img src="../src/assets/head-bg.png" alt="">
+                </div>
+                <div class="out-text">
+                    <h1>Listen to the <span>amazing</span> music sound.</h1>
+                    <p>Experience music like never before</p>
+                    <button class="button black-button">Shopping Now</button>
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <div class="container">
+                <div class="partners-content">
+                    <img src="../src/assets/partner.png" alt="" id="show">
+                    <img src="../src/assets/partner.png" alt="" id="not-show">
+                    <img src="../src/assets/partner.png" alt="" id="not-show">
+                    <img src="../src/assets/partner.png" alt="" id="not-show">
+                    <img src="../src/assets/partner.png" alt="" id="not-show">
+                    <img src="../src/assets/partner.png" alt="" id="not-show">
+                </div>
+            </div>
+        </section>
+        <section class="new-arrivals">
+            <div class="container">
+                <div class="new-arrivals-content">
+                    <div class="na-head">
+                        <h1>New Arrivals</h1>
+                    </div>
+                    <div class="products" id="#products_fetch">
+                        <div class="product">
+                            <div class="product-preview">
+                                <div class="prod-img">
+                                    <img src="../src/assets/prod-img.png" alt="">
+                                </div>
+
+                                <div class="hover-act">
+                                    <div class="act-line-1">
+                                        <p id="label">New</p>
+                                        <div class="like"><i class="ri-heart-line"></i></div>
+                                        <!-- work it on js (fill heart) -->
+                                    </div>
+                                    <div class="act-line-2">
+                                        <button class="button black-button">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stars"> <!--  work it on js (api) -->
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="name">
+                                <h3>Skullcandy - Crusher anc 2 wireless headphones</h3>
+                            </div>
+                            <div class="price">
+                                <p>$299.99</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-preview">
+                                <div class="prod-img">
+                                    <img src="../src/assets/prod-img.png" alt="">
+                                </div>
+
+                                <div class="hover-act">
+                                    <div class="act-line-1">
+                                        <p id="label">New</p>
+                                        <div class="like"><i class="ri-heart-line"></i></div>
+                                        <!-- work it on js (fill heart) -->
+                                    </div>
+                                    <div class="act-line-2">
+                                        <button class="button black-button">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stars"> <!--  work it on js (api) -->
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="name">
+                                <h3>Skullcandy - Crusher anc 2 wireless headphones</h3>
+                            </div>
+                            <div class="price">
+                                <p>$299.99</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-preview">
+                                <div class="prod-img">
+                                    <img src="../src/assets/prod-img.png" alt="">
+                                </div>
+
+                                <div class="hover-act">
+                                    <div class="act-line-1">
+                                        <p id="label">New</p>
+                                        <div class="like"><i class="ri-heart-line"></i></div>
+                                        <!-- work it on js (fill heart) -->
+                                    </div>
+                                    <div class="act-line-2">
+                                        <button class="button black-button">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stars"> <!--  work it on js (api) -->
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="name">
+                                <h3>Skullcandy - Crusher anc 2 wireless headphones</h3>
+                            </div>
+                            <div class="price">
+                                <p>$299.99</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-preview">
+                                <div class="prod-img">
+                                    <img src="../src/assets/prod-img.png" alt="">
+                                </div>
+
+                                <div class="hover-act">
+                                    <div class="act-line-1">
+                                        <p id="label">New</p>
+                                        <div class="like"><i class="ri-heart-line"></i></div>
+                                        <!-- work it on js (fill heart) -->
+                                    </div>
+                                    <div class="act-line-2">
+                                        <button class="button black-button">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stars"> <!--  work it on js (api) -->
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="name">
+                                <h3>Skullcandy - Crusher anc 2 wireless headphones</h3>
+                            </div>
+                            <div class="price">
+                                <p>$299.99</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="shop-collection">
+            <div class="container">
+                <div class="shop-coll-content">
+                    <div class="sc-head">
+                        <h1>Shop Collection</h1>
+                    </div>
+                    <div class="collections">
+                        <div class="img-one">
+                            <img src="../src/assets/headset-cat.png" alt="">
+                            <div class="img-txt">
+                                <h1>Headband</h1>
+                                <p>Collection <i class="ri-arrow-right-long-line"></i></p>
+                            </div>
+                        </div>
+                        <div class="img-two">
+                            <div class="one">
+                                <img src="../src/assets/earbuds-cat.png" alt="">
+                                <div class="img-txt">
+                                    <h1>Earbuds</h1>
+                                    <p>Collection <i class="ri-arrow-right-long-line"></i></p>
+                                </div>
+                            </div>
+                            <div class="two">
+                                <img src="../src/assets/others-cat.png" alt="">
+                                <div class="img-txt">
+                                    <h1>Accessories</h1>
+                                    <p>Collection <i class="ri-arrow-right-long-line"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="best-seller">
+            <div class="container">
+                <div class="best-seller-content">
+                    <div class="bs-head">
+                        <h1>Best Seller</h1>
+                    </div>
+                    <div class="products">
+                        <div class="product">
+                            <div class="product-preview">
+                                <div class="prod-img">
+                                    <img src="../src/assets/prod-img.png" alt="">
+                                </div>
+
+                                <div class="hover-act">
+                                    <div class="act-line-1">
+                                        <p id="label">New</p>
+                                        <div class="like"><i class="ri-heart-line"></i></div>
+                                        <!-- work it on js (fill heart) -->
+                                    </div>
+                                    <div class="act-line-2">
+                                        <button class="button black-button">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stars"> <!--  work it on js (api) -->
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="name">
+                                <h3>Skullcandy - Crusher anc 2 wireless headphones</h3>
+                            </div>
+                            <div class="price">
+                                <p>$299.99</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-preview">
+                                <div class="prod-img">
+                                    <img src="../src/assets/prod-img.png" alt="">
+                                </div>
+
+                                <div class="hover-act">
+                                    <div class="act-line-1">
+                                        <p id="label">New</p>
+                                        <div class="like"><i class="ri-heart-line"></i></div>
+                                        <!-- work it on js (fill heart) -->
+                                    </div>
+                                    <div class="act-line-2">
+                                        <button class="button black-button">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stars"> <!--  work it on js (api) -->
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="name">
+                                <h3>Skullcandy - Crusher anc 2 wireless headphones</h3>
+                            </div>
+                            <div class="price">
+                                <p>$299.99</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-preview">
+                                <div class="prod-img">
+                                    <img src="../src/assets/prod-img.png" alt="">
+                                </div>
+
+                                <div class="hover-act">
+                                    <div class="act-line-1">
+                                        <p id="label">New</p>
+                                        <div class="like"><i class="ri-heart-line"></i></div>
+                                        <!-- work it on js (fill heart) -->
+                                    </div>
+                                    <div class="act-line-2">
+                                        <button class="button black-button">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stars"> <!--  work it on js (api) -->
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="name">
+                                <h3>Skullcandy - Crusher anc 2 wireless headphones</h3>
+                            </div>
+                            <div class="price">
+                                <p>$299.99</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-preview">
+                                <div class="prod-img">
+                                    <img src="../src/assets/prod-img.png" alt="">
+                                </div>
+
+                                <div class="hover-act">
+                                    <div class="act-line-1">
+                                        <p id="label">New</p>
+                                        <div class="like"><i class="ri-heart-line"></i></div>
+                                        <!-- work it on js (fill heart) -->
+                                    </div>
+                                    <div class="act-line-2">
+                                        <button class="button black-button">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stars"> <!--  work it on js (api) -->
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="name">
+                                <h3>Skullcandy - Crusher anc 2 wireless headphones</h3>
+                            </div>
+                            <div class="price">
+                                <p>$299.99</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-preview">
+                                <div class="prod-img">
+                                    <img src="../src/assets/prod-img.png" alt="">
+                                </div>
+
+                                <div class="hover-act">
+                                    <div class="act-line-1">
+                                        <p id="label">New</p>
+                                        <div class="like"><i class="ri-heart-line"></i></div>
+                                        <!-- work it on js (fill heart) -->
+                                    </div>
+                                    <div class="act-line-2">
+                                        <button class="button black-button">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stars"> <!--  work it on js (api) -->
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="name">
+                                <h3>Skullcandy - Crusher anc 2 wireless headphones</h3>
+                            </div>
+                            <div class="price">
+                                <p>$299.99</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-preview">
+                                <div class="prod-img">
+                                    <img src="../src/assets/prod-img.png" alt="">
+                                </div>
+
+                                <div class="hover-act">
+                                    <div class="act-line-1">
+                                        <p id="label">New</p>
+                                        <div class="like"><i class="ri-heart-line"></i></div>
+                                        <!-- work it on js (fill heart) -->
+                                    </div>
+                                    <div class="act-line-2">
+                                        <button class="button black-button">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stars"> <!--  work it on js (api) -->
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="name">
+                                <h3>Skullcandy - Crusher anc 2 wireless headphones</h3>
+                            </div>
+                            <div class="price">
+                                <p>$299.99</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-preview">
+                                <div class="prod-img">
+                                    <img src="../src/assets/prod-img.png" alt="">
+                                </div>
+
+                                <div class="hover-act">
+                                    <div class="act-line-1">
+                                        <p id="label">New</p>
+                                        <div class="like"><i class="ri-heart-line"></i></div>
+                                        <!-- work it on js (fill heart) -->
+                                    </div>
+                                    <div class="act-line-2">
+                                        <button class="button black-button">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stars"> <!--  work it on js (api) -->
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="name">
+                                <h3>Skullcandy - Crusher anc 2 wireless headphones</h3>
+                            </div>
+                            <div class="price">
+                                <p>$299.99</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-preview">
+                                <div class="prod-img">
+                                    <img src="../src/assets/prod-img.png" alt="">
+                                </div>
+
+                                <div class="hover-act">
+                                    <div class="act-line-1">
+                                        <p id="label">New</p>
+                                        <div class="like"><i class="ri-heart-line"></i></div>
+                                        <!-- work it on js (fill heart) -->
+                                    </div>
+                                    <div class="act-line-2">
+                                        <button class="button black-button">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stars"> <!--  work it on js (api) -->
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="name">
+                                <h3>Skullcandy - Crusher anc 2 wireless headphones</h3>
+                            </div>
+                            <div class="price">
+                                <p>$299.99</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="promotion">
+            <div class="promo-img">
+                <img src="../src/assets/offer-img.png" alt="">
+            </div>
+            <div class="promo-txt">
+                <div class="promo-text">
+                    <p>Promotion</p>
+                    <h1>Hurry up! 40% OFF</h1>
+                    <h4>Thousands of high tech are waiting for you</h4>
+
+                    <div class="timer">
+                        <p>Offer expires in:</p>
+                        <div class="time-blocks">
+                            <div class="block">
+                                <div class="time-left">
+                                    <h2>02</h2>
+                                </div>
+                                <h4>Days</h4>
+                            </div>
+                            <div class="block">
+                                <div class="time-left">
+                                    <h2>12</h2>
+                                </div>
+                                <h4>Hours</h4>
+                            </div>
+                            <div class="block">
+                                <div class="time-left">
+                                    <h2>45</h2>
+                                </div>
+                                <h4>Minutes</h4>
+                            </div>
+                            <div class="block">
+                                <div class="time-left">
+                                    <h2>05</h2>
+                                </div>
+                                <h4>Seconds</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="button black-button">Shop now</button>
+                </div>
+            </div>
+        </section>
+        <section class="why-us">
+            <div class="container">
+                <div class="why-us-content">
+                    <div class="wu-box">
+                        <i class="ri-truck-line"></i>
+                        <h2>Free Shipping</h2>
+                        <p>Order above $200</p>
+                    </div>
+                    <div class="wu-box">
+                        <i class="ri-wallet-2-line"></i>
+                        <h2>Money-back</h2>
+                        <p>30 days guarantee</p>
+                    </div>
+                    <div class="wu-box">
+                        <i class="ri-git-repository-private-line"></i>
+                        <h2>Secure Payments</h2>
+                        <p>Secured by Stripe</p>
+                    </div>
+                    <div class="wu-box">
+                        <i class="ri-phone-line"></i>
+                        <h2>24/7 Support</h2>
+                        <p>Phone and Email support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="socials">
+            <div class="container">
+                <div class="socials-content">
+                    <div class="socials-txt">
+                        <p>newsfeed</p>
+                        <h1>Instagram</h1>
+                        <h2>Follow us on social media for more discount & promotions</h2>
+                        <h3>@3legant_official</h3>
+                    </div>
+                    <div class="photo-shuffle">
+                        <img src="../src/assets/social-img.png" alt="" id="show">
+                        <img src="../src/assets/social-img.png" alt="" id="not-show">
+                        <img src="../src/assets/social-img.png" alt="" id="not-show">
+                        <img src="../src/assets/social-img.png" alt="" id="not-show">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="newsletter">
+            <div class="bg-img">
+                <img src="../src/assets/newspaper-bg.png" alt="">
+            </div>
+            <div class="news-txt">
+                <h1>Join Our Newsletter</h1>
+                <h2>Sign up for deals, new products and promotions</h2>
+                <div class="input">
+                    <i class="ri-mail-line"></i>
+                    <input type="email" name="email" id="email" placeholder="Email address">
+                    <a href="#">Signup</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-lines">
+                <div class="footer-one">
+                    <div class="shop">
+                        <h1>3legant.</h1>
+                        <p>Headphone Store</p>
+                    </div>
+                    <div class="navbar-list">
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Shop</a>
+                            </li>
+                            <li>
+                                <a href="#">Product</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-two">
+                    <div class="shop-policy">
+                        <p>Copyright © 2023 3legant. All rights reserved</p>
+                        <h4>Privacy Policy</h4>
+                        <h4>Terms of Use</h4>
+                    </div>
+                    <div class="social-links">
+                        <i class="ri-instagram-line"></i>
+                        <i class="ri-facebook-fill"></i>
+                        <i class="ri-youtube-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/js/app.js"></script>
+</body>
+
+</html>

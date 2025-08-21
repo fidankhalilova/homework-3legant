@@ -1,0 +1,107 @@
+footer {
+    padding: 60px 0;
+    background-color: map-get($colors, black-c);
+    margin: 0 auto;
+
+    .footer-lines {
+        @include flex(column, center, center, nowrap, 50px);
+
+        .footer-one {
+            width: 100%;
+            @include flex(row, space-between, center, nowrap, null);
+
+            @media (max-width: 1000px) {
+                @include flex(column, flex-start, center, nowrap, 20px);
+            }
+
+            .shop {
+                @include flex(row, flex-start, center, nowrap, 16px);
+
+                h1 {
+                    color: map-get($colors, white-c);
+                    text-align: center;
+                    font-family: $font-two;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 24px;
+                }
+
+                p {
+                    padding-left: 16px;
+                    border-left: 1px solid map-get($colors, white-c);
+                    color: map-get($colors, white-c);
+                    font-family: $font-three;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 22px;
+                }
+            }
+
+            .navbar-list {
+                ul {
+                    @include flex(row, center, center, nowrap, 40px);
+
+                    li {
+                        a {
+                            color: map-get($colors, white-c);
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-two {
+            width: 100%;
+            @include flex(row, space-between, center, nowrap, null);
+            padding-top: 14px;
+            border-top: 1px solid map-get($colors, light-gray-c);
+
+            @media (max-width: 1000px) {
+                @include flex(column, flex-start, center, nowrap, 10px);
+            }
+
+            .shop-policy {
+                @include flex(row, center, center, nowrap, 16px);
+
+                @media (max-width: 1000px) {
+                    @include flex(column, flex-start, center, nowrap, 10px);
+                }
+
+                p {
+                    color: map-get($colors, white-c);
+                    font-family: $font-two;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+
+                h4 {
+                    color: map-get($colors, white-c);
+                    font-family: $font-two;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 20px;
+                }
+
+            }
+
+            .social-links {
+                @include flex(row, center, center, nowrap, 8px);
+
+                i {
+                    font-size: 30px;
+                    color: map-get($colors, white-c);
+                }
+            }
+        }
+    }
+}

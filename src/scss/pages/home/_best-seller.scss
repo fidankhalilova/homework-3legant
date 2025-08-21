@@ -1,0 +1,23 @@
+.best-seller {
+    margin: 60px 0;
+
+    .best-seller-content {
+        @include flex(column, center, flex-start, nowrap, 40px);
+
+        .bs-head {
+            h1 {
+                font-family: $font-two;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 44px;
+                letter-spacing: -0.4px;
+            }
+        }
+
+        .products {
+            width: 100%;
+            @include flex(row, space-between, center, wrap, 40px);
+        }
+    }
+}

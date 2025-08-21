@@ -1,0 +1,109 @@
+.promotion {
+    @include flex(row, center, center, nowrap, 0px);
+    width: 100%;
+    height: 100%;
+    background-color: map-get($colors, light-yellow-c);
+
+    @media (max-width: 1000px) {
+        @include flex(column, center, center, nowrap, 20px);
+        padding-bottom: 20px;
+    }
+
+    .promo-img {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .promo-txt {
+        width: 100%;
+
+        .promo-text {
+            @include flex(column, center, flex-start, nowrap, 15px);
+            margin-left: 60px;
+            height: 100%;
+
+            p {
+                color: map-get($colors, blue-c);
+                font-family: $font-three;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 16px;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                font-family: $font-two;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 44px;
+                letter-spacing: -0.4px;
+            }
+
+            h4 {
+                font-family: $font-three;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px;
+            }
+
+            .timer {
+                @include flex(column, center, flex-start, nowrap, 20px);
+
+                p {
+                    color: map-get($colors, black-c);
+                    font-family: $font-three;
+                    font-size: 16px;
+                    font-style: normal;
+                    text-transform: none;
+                    font-weight: 400;
+                    line-height: 26px;
+                }
+
+                .time-blocks {
+                    @include flex(row, center, center, nowrap, 10px);
+
+                    .block {
+                        @include flex(column, center, center, nowrap, 6px);
+
+                        .time-left {
+                            background-color: map-get($colors, white-c);
+                            padding: 14px 8px;
+                            border-radius: 20px;
+
+                            h2 {
+                                text-align: center;
+                                font-family: $font-two;
+                                font-size: 34px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 38px;
+                                letter-spacing: -0.6px;
+                            }
+                        }
+
+                        h4 {
+                            text-align: center;
+                            font-family: $font-three;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+
+            button {
+                padding: 20px 50px;
+            }
+        }
+    }
+}
