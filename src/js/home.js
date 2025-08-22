@@ -12,32 +12,16 @@ function fetchProducts(url, cb) {
         })
 }
 
-let form = document.querySelector('form');
-form.addEventListener('submit', handleSubmit);
-
-function handleSubmit(event) {
-    event.preventDefault();
-    let formData = new FormData(form);
-    let data = Object.fromEntries(formData);
-    let jsonData = JSON.stringify(data);
-
-    fetch(`${LOCAL_BASE}/products`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: jsonData
-    }).then(res => res.json())
-        .then(result => console.log(result.data))
-        .catch(err => console.log(err))
-        .finally(console.log("Fetch completed!"));
-}
-
-
 let FetchHTMLData = document.querySelector('.products');
 
 const renderProductsHTML = (products) => {
     products.forEach((product) => {
+        if (product.category === "best") {
+            FetchHTMLData = document.querySelector('.products-bs');
+        }
+        else if (product.category === "new") {
+            FetchHTMLData = document.querySelector('.products');
+        }
         const html = `<div class="product">
                             <div class="product-preview">
                                 <div class="prod-img">

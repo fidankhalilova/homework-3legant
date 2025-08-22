@@ -6,7 +6,7 @@
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+del, dfn, em, img, .product .product-preview .prod-img:hover img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
@@ -108,20 +108,25 @@ a {
 .product .product-preview .prod-img {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
-.product .product-preview .prod-img img {
+.product .product-preview .prod-img img, .product .product-preview .prod-img:hover img {
   width: 270px;
   height: 380px;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: 0.4s ease-in-out;
 }
 @media (max-width: 1000px) {
-  .product .product-preview .prod-img img {
+  .product .product-preview .prod-img img, .product .product-preview .prod-img:hover img {
     width: 100%;
     height: 100%;
   }
 }
-.product .product-preview .hover-act {
+.product .product-preview .prod-img:hover img {
+  transform: scale(1.2);
+}
+.product .product-preview .hover-act, .product .product-preview:hover .hover-act {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -130,8 +135,10 @@ a {
   height: 100%;
   width: 100%;
   z-index: 2;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
 }
-.product .product-preview .hover-act .act-line-1 {
+.product .product-preview .hover-act .act-line-1, .product .product-preview:hover .hover-act .act-line-1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -143,7 +150,7 @@ a {
   width: 100%;
 }
 @media (max-width: 1000px) {
-  .product .product-preview .hover-act .act-line-1 {
+  .product .product-preview .hover-act .act-line-1, .product .product-preview:hover .hover-act .act-line-1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -175,7 +182,7 @@ a {
   background-color: #FFFFFF;
   border-radius: 100%;
 }
-.product .product-preview .hover-act .act-line-2 {
+.product .product-preview .hover-act .act-line-2, .product .product-preview:hover .hover-act .act-line-2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -193,6 +200,9 @@ a {
   .product .product-preview .hover-act .act-line-2 button {
     width: 90%;
   }
+}
+.product .product-preview:hover .hover-act, .product .product-preview:hover .hover-act {
+  opacity: 1;
 }
 .product .stars {
   display: flex;
@@ -232,7 +242,6 @@ header .desktop_nav {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 10px 0;
 }
 @media (max-width: 1000px) {
   header .desktop_nav {
@@ -304,7 +313,7 @@ header .mobile_nav {
 }
 @media (max-width: 1000px) {
   header .mobile_nav {
-    padding: 20px 10px;
+    padding: 0px 10px;
     display: block;
     padding-left: 0;
     padding-right: 0;
@@ -498,18 +507,39 @@ footer .footer-lines .footer-two .social-links i {
   }
 }
 .banner .banner-content .bg-img {
+  display: block;
   position: relative;
+  width: 100%;
 }
-.banner .banner-content .bg-img img {
+.banner .banner-content .bg-img img, .banner .banner-content .bg-img .product .product-preview .prod-img:hover img, .product .product-preview .prod-img:hover .banner .banner-content .bg-img img {
   width: 100%;
   height: 820px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (max-width: 1000px) {
-  .banner .banner-content .bg-img img {
+@media (max-width: 700px) {
+  .banner .banner-content .bg-img img, .banner .banner-content .bg-img .product .product-preview .prod-img:hover img, .product .product-preview .prod-img:hover .banner .banner-content .bg-img img {
+    display: none;
+  }
+}
+.banner .banner-content .mob-img {
+  display: none;
+}
+.banner .banner-content .mob-img img, .banner .banner-content .mob-img .product .product-preview .prod-img:hover img, .product .product-preview .prod-img:hover .banner .banner-content .mob-img img {
+  width: 100%;
+  height: 800px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 700px) {
+  .banner .banner-content .mob-img img, .banner .banner-content .mob-img .product .product-preview .prod-img:hover img, .product .product-preview .prod-img:hover .banner .banner-content .mob-img img {
     width: 100%;
-    height: 600px;
+    height: auto;
+  }
+}
+@media (max-width: 700px) {
+  .banner .banner-content .mob-img {
+    display: block;
   }
 }
 .banner .banner-content .out-text {
@@ -526,9 +556,14 @@ footer .footer-lines .footer-two .social-links i {
 }
 @media (max-width: 1000px) {
   .banner .banner-content .out-text {
-    bottom: 10px;
-    right: 100px;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    bottom: 475px;
+    right: 71px;
     max-width: 300px;
   }
 }
@@ -550,12 +585,16 @@ footer .footer-lines .footer-two .social-links i {
 }
 @media (max-width: 1000px) {
   .banner .banner-content .out-text h1 span {
-    font-size: 50px;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
   }
 }
 @media (max-width: 1000px) {
   .banner .banner-content .out-text h1 {
-    font-size: 50px;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
   }
 }
 .banner .banner-content .out-text p {
@@ -568,6 +607,7 @@ footer .footer-lines .footer-two .social-links i {
 @media (max-width: 1000px) {
   .banner .banner-content .out-text p {
     font-size: 16px;
+    text-align: center;
   }
 }
 .banner .banner-content .out-text button {
@@ -585,7 +625,7 @@ footer .footer-lines .footer-two .social-links i {
   flex-wrap: nowrap;
   gap: 24px;
 }
-.partners .partners-content img {
+.partners .partners-content img, .partners .partners-content .product .product-preview .prod-img:hover img, .product .product-preview .prod-img:hover .partners .partners-content img {
   width: 167px;
   height: 64px;
   -o-object-fit: cover;
@@ -697,8 +737,8 @@ footer .footer-lines .footer-two .social-links i {
 }
 @media (max-width: 1000px) {
   .shop-collection .shop-coll-content .collections .img-one img {
-    width: 400px;
-    height: 370px;
+    width: 100%;
+    height: 100%;
   }
 }
 .shop-collection .shop-coll-content .collections .img-one .img-txt {
@@ -833,7 +873,7 @@ footer .footer-lines .footer-two .social-links i {
   line-height: 44px;
   letter-spacing: -0.4px;
 }
-.best-seller .best-seller-content .products {
+.best-seller .best-seller-content .products-bs {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -868,7 +908,7 @@ footer .footer-lines .footer-two .social-links i {
 .promotion .promo-img {
   width: 100%;
 }
-.promotion .promo-img img {
+.promotion .promo-img img, .promotion .promo-img .product .product-preview .prod-img:hover img, .product .product-preview .prod-img:hover .promotion .promo-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -886,6 +926,11 @@ footer .footer-lines .footer-two .social-links i {
   gap: 15px;
   margin-left: 60px;
   height: 100%;
+}
+@media (max-width: 1000px) {
+  .promotion .promo-txt .promo-text {
+    margin-left: 20px;
+  }
 }
 .promotion .promo-txt .promo-text p {
   color: #377DFF;
@@ -1088,7 +1133,7 @@ footer .footer-lines .footer-two .social-links i {
   flex-wrap: nowrap;
   gap: 24px;
 }
-.socials .socials-content .photo-shuffle img {
+.socials .socials-content .photo-shuffle img, .socials .socials-content .photo-shuffle .product .product-preview .prod-img:hover img, .product .product-preview .prod-img:hover .socials .socials-content .photo-shuffle img {
   width: 300px;
   height: 300px;
   -o-object-fit: cover;
@@ -1112,13 +1157,13 @@ footer .footer-lines .footer-two .social-links i {
 .newsletter .bg-img {
   position: relative;
 }
-.newsletter .bg-img img {
+.newsletter .bg-img img, .newsletter .bg-img .product .product-preview .prod-img:hover img, .product .product-preview .prod-img:hover .newsletter .bg-img img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (max-width: 1000px) {
-  .newsletter .bg-img img {
+  .newsletter .bg-img img, .newsletter .bg-img .product .product-preview .prod-img:hover img, .product .product-preview .prod-img:hover .newsletter .bg-img img {
     height: 300px;
   }
 }

@@ -15,7 +15,7 @@
             }
         }
 
-        .products {
+        .products-bs {
             width: 100%;
             @include flex(row, space-between, center, wrap, 40px);
         }

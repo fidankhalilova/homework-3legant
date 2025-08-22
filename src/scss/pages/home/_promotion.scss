@@ -27,6 +27,10 @@
             margin-left: 60px;
             height: 100%;
 
+            @media (max-width: 1000px) {
+                margin-left: 20px;
+            }
+
             p {
                 color: map-get($colors, blue-c);
                 font-family: $font-three;
