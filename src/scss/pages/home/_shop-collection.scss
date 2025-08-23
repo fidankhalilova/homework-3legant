@@ -27,15 +27,25 @@
 
             .img-one {
                 position: relative;
+                overflow: hidden;
 
                 img {
                     width: 650px;
                     height: 800px;
                     object-fit: cover;
+                    transition: 0.4s ease-in-out;
 
                     @media (max-width: 1000px) {
                         width: 100%;
                         height: 100%;
+                    }
+                }
+
+                &:hover {
+
+                    img {
+                        @extend img;
+                        transform: scale(1.1);
                     }
                 }
 
@@ -60,6 +70,9 @@
                         font-weight: 500;
                         line-height: 28px;
                         letter-spacing: -0.4px;
+                        padding-bottom: 4px;
+                        border-bottom: 1px solid map-get($colors, black-c);
+                        display: inline-block;
                     }
                 }
             }
@@ -74,15 +87,25 @@
 
                 .one {
                     position: relative;
+                    overflow: hidden;
 
                     img {
                         width: 600px;
                         height: 370px;
                         object-fit: cover;
+                        transition: 0.4s ease-in-out;
 
                         @media (max-width: 1000px) {
                             width: 100%;
                             height: 370px;
+                        }
+                    }
+
+                    &:hover {
+
+                        img {
+                            @extend img;
+                            transform: scale(1.1);
                         }
                     }
 
@@ -107,21 +130,34 @@
                             font-weight: 500;
                             line-height: 28px;
                             letter-spacing: -0.4px;
+                            padding-bottom: 4px;
+                            border-bottom: 1px solid map-get($colors, black-c);
+                            display: inline-block;
                         }
                     }
                 }
 
                 .two {
                     position: relative;
+                    overflow: hidden;
 
                     img {
                         width: 600px;
                         height: 370px;
                         object-fit: cover;
+                        transition: 0.4s ease-in-out;
 
                         @media (max-width: 1000px) {
                             width: 100%;
                             height: 370px;
+                        }
+                    }
+
+                    &:hover {
+
+                        img {
+                            @extend img;
+                            transform: scale(1.1);
                         }
                     }
 
@@ -146,6 +182,9 @@
                             font-weight: 500;
                             line-height: 28px;
                             letter-spacing: -0.4px;
+                            padding-bottom: 4px;
+                            border-bottom: 1px solid map-get($colors, black-c);
+                            display: inline-block;
                         }
                     }
                 }
